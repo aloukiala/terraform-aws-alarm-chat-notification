@@ -2,8 +2,8 @@
 ## [Unreleased]
 
 
-<a name="v.0.1.0"></a>
-## v.0.1.0 - 2020-05-25
+<a name="v0.1.0"></a>
+## v0.1.0 - 2020-05-25
 ### Added
 - Added missing variables
 
@@ -14,4 +14,4 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/aloukiala/terraform-alarm-chat-notification/compare/v.0.1.0...HEAD
+[Unreleased]: https://github.com/aloukiala/terraform-alarm-chat-notification/compare/v0.1.0...HEAD
