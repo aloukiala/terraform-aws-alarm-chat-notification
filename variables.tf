@@ -24,10 +24,17 @@ variable "teams_webhook_url" {
 variable "environment" {
     description = "Name of the enviroment in question. Is used as part of message send"
     type        = string
+    default     = "Not defined"
 }
 
 variable "sns_topic_name" {
     description = "Name of the SNS topic from where the messages are sent to chat channels"
     type        = string
     default     = "notification-topic-chat-webhook"
+}
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {}
 }

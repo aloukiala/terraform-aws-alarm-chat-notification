@@ -16,6 +16,8 @@ resource "aws_iam_role" "iam_for_lambda" {
   ]
 }
 EOF
+
+    tags = var.tags
 }
 
 resource aws_iam_role_policy_attachment basic {
@@ -48,17 +50,18 @@ resource "aws_lambda_function" "notification_lambda" {
 
     environment {
         variables = {
-        TEAMS_WEBHOOK_URL = var.webhook_url
+        TEAMS_WEBHOOK_URL = var.teams_webhook_url
         ENV = var.environment
         }
     }
 
-    tags = var.common_tags
+    tags = var.tags
 }
 
 resource "aws_sns_topic" "alarm_topic" {
     count = var.create ? 1 : 0
     name = var.sns_topic_name
+    tags = var.tags
 }
 
 
