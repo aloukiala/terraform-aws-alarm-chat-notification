@@ -1,0 +1,45 @@
+{
+    "@context": "https://schema.org/extensions",
+    "@type": "MessageCard",
+    "themeColor": "FF0000",
+    "title": "Message from AWS",
+    "text": "This is message from aws",
+    "summary": "Summary is this",
+    "sections": [
+        {
+            "facts": 
+            [
+                { 
+                    "name": "Environment",
+                    "value": "env"
+                },
+                {
+                    "name": "Account",
+                    "value": "account"
+                },
+                {
+                    "name": "Time",
+                    "value": "time"
+                }
+            ]
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "ActionCard",
+            "name": "View the metric in aws",
+            "actions": [
+                {
+                    "@type": "OpenUri",
+                    "name": "View metric",
+                    "targets": [
+                        {
+                            "os": "default",
+                            "uri": "http://www.google.com"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
